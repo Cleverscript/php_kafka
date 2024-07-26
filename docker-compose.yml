@@ -46,7 +46,7 @@ services:
       - 29094:29092
     hostname: kafka3
     environment:
-      KAFKA_BROKER_ID: 2
+      KAFKA_BROKER_ID: 3
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:29094
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
@@ -87,7 +87,7 @@ services:
     volumes:
       - './public:/var/www/public'
       - './docker/logs/php:/var/log/php/'
-    environment:
+      - './docker/logs/xdebug/xdebug.log:/var/log/xdebug/'
     links:
       - kafka-ui
     extra_hosts:
