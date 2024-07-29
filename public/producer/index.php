@@ -7,7 +7,7 @@ use longlang\phpkafka\Producer\ProducerConfig;
 use longlang\phpkafka\Protocol\RecordBatch\RecordHeader;
 
 $config = new ProducerConfig();
-$config->setBootstrapServer('127.0.0.1:29092');
+$config->setBootstrapServer('kafka:29092'); //127.0.0.1
 $config->setUpdateBrokers(true);
 $config->setAcks(-1);
 $producer = new Producer($config);

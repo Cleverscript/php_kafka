@@ -12,7 +12,7 @@ function consume(ConsumeMessage $message)
     // $consumer->ack($message); // If autoCommit is set as false, commit manually.
 }
 $config = new ConsumerConfig();
-$config->setBroker('127.0.0.1:29092');
+$config->setBroker('kafka:29092'); //127.0.0.1
 $config->setTopic('test'); // topic
 $config->setGroupId('testGroup'); // group ID
 $config->setClientId('test'); // client ID. Use different settings for different consumers.

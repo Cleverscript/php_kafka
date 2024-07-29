@@ -1,3 +1,5 @@
 .vscode
 public/vendor
 public/composer.lock
+docker/logs/nginx/*
+docker/logs/php/*

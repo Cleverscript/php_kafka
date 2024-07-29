@@ -6,7 +6,7 @@ use longlang\phpkafka\Consumer\Consumer;
 use longlang\phpkafka\Consumer\ConsumerConfig;
 
 $config = new ConsumerConfig();
-$config->setBroker('127.0.0.1:29092');
+$config->setBroker('kafka:29092'); //127.0.0.1
 $config->setTopic('test'); // topic
 $config->setGroupId('testGroup'); // group ID
 $config->setClientId('test_custom'); // client ID. Use different settings for different consumers.

@@ -74,6 +74,7 @@ services:
     container_name: php_kafka_nginx
     volumes:
       - './docker/images/nginx/conf.d:/etc/nginx/conf.d'
+      - './docker/logs/nginx:/var/log/nginx'
       - './public:/var/www/public'
     ports:
       - 8080:80

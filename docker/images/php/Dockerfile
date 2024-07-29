@@ -43,5 +43,5 @@ USER php_kafka
 
 WORKDIR /var/www/public
 
-ENTRYPOINT ["composer"]
-CMD ["i"]
+#ENTRYPOINT ["composer"]
+#CMD ["i"]
