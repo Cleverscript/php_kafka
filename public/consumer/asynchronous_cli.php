@@ -1,5 +1,12 @@
 <?php
+if (php_sapi_name() !== 'cli') {
+    header('HTTP/1.1 404 Not Found');
+    echo '404 Not Found.';
+    exit;
+}
+
 //Composer autoload
+$_SERVER['DOCUMENT_ROOT'] = '../';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 
 use longlang\phpkafka\Consumer\ConsumeMessage;
